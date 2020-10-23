@@ -20,6 +20,7 @@
 ;;; Copyright © 2020 Tom Zander <tomz@freedommail.ch>
 ;;; Copyright © 2020 Marius Bakke <mbakke@fastmail.com>
 ;;; Copyright © 2020 Vinicius Monego <monego@posteo.net>
+;;; Copyright © 2020 Carlo Holl <carloholl@gmail.com>
 ;;;
 ;;; This file is part of GNU Guix.
 ;;;
