@@ -1640,6 +1640,39 @@ hackage.haskell.org/package/cassava-0.5.2.0/#readme, README} for more usage
 examples.")
     (license license:bsd-3)))
 
+(define-public ghc-cassava-megaparsec
+  (package
+    (name "ghc-cassava-megaparsec")
+    (version "2.0.2")
+    (source
+      (origin
+        (method url-fetch)
+        (uri (string-append
+               "https://hackage.haskell.org/package/cassava-megaparsec/"
+               "cassava-megaparsec-"
+               version
+               ".tar.gz"))
+        (sha256
+          (base32
+            "03x1462agrfdagklp8c89b8p4z2hd8nbf6d3895sz770zjkawda7"))))
+    (build-system haskell-build-system)
+    (inputs
+      `(("ghc-cassava" ,ghc-cassava)
+        ("ghc-megaparsec" ,ghc-megaparsec)
+        ("ghc-unordered-containers"
+         ,ghc-unordered-containers)
+        ("ghc-vector" ,ghc-vector)))
+    (native-inputs
+      `(("ghc-hspec" ,ghc-hspec)
+        ("ghc-hspec-megaparsec" ,ghc-hspec-megaparsec)))
+    (home-page
+      "https://github.com/stackbuilders/cassava-megaparsec")
+    (synopsis
+      "Megaparsec parser of CSV files that plays nicely with Cassava")
+    (description
+      "Megaparsec parser of CSV files that plays nicely with Cassava.")
+    (license license:expat)))
+
 (define-public ghc-cborg
   (package
     (name "ghc-cborg")
